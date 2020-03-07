@@ -1,0 +1,33 @@
+<div class="container section-padding-sm">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card" style="width: 100%;">
+        <div class="card-body">
+        <h2 class="card-title text-center">contest</h2>
+          <%= form_for (@contest) do |form| %>
+
+
+
+          <div class="row pt-5">
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= form.label :name %>
+                <%= form.text_field :name, class: "form-control" %>
+              </div>  
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <%= form.label :description %>
+                <%= form.text_field :description, class: "form-control" %>
+              </div>   
+            </div>
+          </div>  
+          <div class="actions">
+              <%= form.button "Submit",  class: "btn btn-primary btn-block mt-5", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Creating contest..."} %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
