@@ -6,6 +6,11 @@
         <h2 class="card-title text-center">contest</h2>
           <%= form_for (@contest) do |form| %>
 
+          <% if @contest.errors.any? %>
+              <% @contest.errors.full_messages.each do |error| %>
+                <%= alert_generator error %>
+              <% end %>
+            <% end %>
 
 
           <div class="row pt-5">
